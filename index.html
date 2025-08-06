@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multimedia Fun Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fdf6f0;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #d94f30;
+      animation: bounce 2s ease infinite;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 15px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #ffdac2;
+    }
+
+    ul, ol {
+      margin-bottom: 30px;
+    }
+
+    img {
+      width: 300px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      animation: fadeIn 3s ease-in;
+    }
+
+    audio, video {
+      margin: 20px 0;
+      display: block;
+    }
+
+    /* 🔄 Animations */
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌟 Welcome to My Multimedia Practice Page!</h1>
+
+  <!-- ✅ Comparison Table -->
+  <h2>Pricing Table: Adventure Packages</h2>
+  <table>
+    <tr>
+      <th>Package</th>
+      <th>Features</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td>Starter</td>
+      <td>1-Day Hike, Snacks Included</td>
+      <td>$49</td>
+    </tr>
+    <tr>
+      <td>Explorer</td>
+      <td>2-Day Hike, Meals & Tent</td>
+      <td>$99</td>
+    </tr>
+    <tr>
+      <td>Pro</td>
+      <td>5-Day Trek, All Gear Included</td>
+      <td>$199</td>
+    </tr>
+  </table>
+
+  <!-- ✅ Creative Lists -->
+  <h2>Top 3 Reasons to Go Outside 🏞️</h2>
+  <ol>
+    <li>Boost your mood and mental health</li>
+    <li>Connect with nature and unplug</li>
+    <li>Explore beautiful landscapes</li>
+  </ol>
+
+  <h2>Things to Pack for an Adventure 🎒</h2>
+  <ul>
+    <li>✅ Water bottle</li>
+    <li>✅ First aid kit</li>
+    <li>✅ Compass and map</li>
+    <li>✅ Snacks & energy bars</li>
+  </ul>
+
+  <!-- ✅ Images with alt text -->
+  <h2>Adventure Gallery 📸</h2>
+  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Hiker standing on a mountain peak with arms raised in triumph">
+  <img src="https://images.unsplash.com/photo-1526481280690-0c42b6d51490" alt="Campfire burning under starry night sky in forest">
+  <img src="https://images.unsplash.com/photo-1504457046781-93cfdc1d1d90" alt="Backpack with camping gear on a wooden bridge near a waterfall">
+
+  <!-- ✅ Audio -->
+  <h2>🎵 Adventure Music</h2>
+  <audio controls>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- ✅ Video -->
+  <h2>🎬 Adventure Highlights Video</h2>
+  <video width="500" controls>
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+</body>
+</html>
