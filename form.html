@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Signup Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3f4f6;
+      padding: 20px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    small {
+      display: block;
+      margin-top: -10px;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .success-msg, .error-msg {
+      text-align: center;
+      margin-top: 15px;
+      font-weight: bold;
+      display: none;
+    }
+
+    .success-msg {
+      color: green;
+    }
+
+    .error-msg {
+      color: red;
+    }
+
+    button {
+      width: 100%;
+      background-color: #16a34a;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #15803d;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🚀 Smart Signup Form</h1>
+
+  <form id="smartForm" novalidate>
+    <!-- Name -->
+    <label for="name">Full Name</label>
+    <input 
+      type="text" 
+      id="name" 
+      name="name" 
+      required 
+      minlength="3"
+      placeholder="e.g. Hibaq Adan"
+      title="Enter at least 3 characters for your name"
+    >
+
+    <!-- Email -->
+    <label for="email">Email Address</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      required 
+      placeholder="e.g. hibaq@example.com"
+      pattern="^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+      title="Enter a valid email (e.g. name@example.com)"
+    >
+
+    <!-- Phone -->
+    <label for="phone">Phone Number</label>
+    <input 
+      type="tel" 
+      id="phone" 
+      name="phone" 
+      required 
+      pattern="^\+?\d{10,13}$"
+      placeholder="+254712345678"
+      title="Enter a valid phone number (10–13 digits, optional +)"
+    >
+
+    <!-- Password -->
+    <label for="password">Password</label>
+    <input 
+      type="password" 
+      id="password" 
+      name="password" 
+      required 
+      minlength="8"
+      pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$"
+      placeholder="Create a strong password"
+      title="At least 8 characters, with upper/lowercase, number, and symbol"
+    >
+    <small>🔒 Password must be 8+ characters with a number, symbol, uppercase, and lowercase.</small>
+
+    <!-- Submit -->
+    <button type="submit">Create Account</button>
+
+    <!-- UX Feedback Messages -->
+    <div class="success-msg" id="successMsg">🎉 Account created successfully!</div>
+    <div class="error-msg" id="errorMsg">⚠️ Please fix the errors above.</div>
+  </form>
+
+  <script>
+    const form = document.getElementById("smartForm");
+    const successMsg = document.getElementById("successMsg");
+    const errorMsg = document.getElementById("errorMsg");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      if (form.checkValidity()) {
+        successMsg.style.display = "block";
+        errorMsg.style.display = "none";
+        form.reset();
+      } else {
+        errorMsg.style.display = "block";
+        successMsg.style.display = "none";
+      }
+    });
+  </script>
+
+</body>
+</html>
